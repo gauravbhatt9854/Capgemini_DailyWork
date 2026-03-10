@@ -12,7 +12,7 @@ public class Supply {
     @Column(name = "billno")
     Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "Sid" , unique = false)
     Supplier supplier;
 
@@ -24,7 +24,7 @@ public class Supply {
         this.quantiy = quantiy;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "itemid" , unique = false)
     Item item;
 

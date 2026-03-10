@@ -1,0 +1,31 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+
+    <persistence-unit name="shopping_pu">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="org.postgresql.Driver"/>
+
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://9854.me:5432/capgDb"/>
+
+            <property name="jakarta.persistence.jdbc.user"
+                      value="gaurav"/>
+
+            <property name="jakarta.persistence.jdbc.password"
+                      value="gauravbhatt"/>
+
+            <!--            <property name="hibernate.dialect"-->
+            <!--                      value="org.hibernate.dialect.PostgreSQLDialect"/>-->
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="create-drop"/>
+
+            <property name="hibernate.show_sql"
+                      value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

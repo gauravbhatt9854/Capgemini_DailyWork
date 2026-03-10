@@ -1,0 +1,10 @@
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\EntityManaagerFactoryProvider.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\Main.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\March7\Main.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\AnOrder.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Customer.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Item.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Payment.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Supplier.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Supply.java
+C:\Users\Gaurav\Desktop\capgGalgotias\hibernate-shopping\src\main\java\com\gal\model\Type.java

@@ -1,0 +1,154 @@
+## BASIC GITHUB COMMANDS, CRON JOB SYNTAX AND MAVEN BASICS
+
+1. BASIC GITHUB COMMANDS
+
+Git is a version control system used to track changes in code and collaborate with others.
+
+Initialize a new Git repository
+git init
+
+Clone an existing repository
+git clone <repository_url>
+
+Check the current status of files
+git status
+
+Add a file to staging area
+git add filename
+
+Add all files to staging area
+git add .
+
+Commit the staged changes
+git commit -m "commit message"
+
+Push changes to remote repository
+git push origin branch_name
+
+Pull latest changes from remote repository
+git pull origin branch_name
+
+Create a new branch
+git branch branch_name
+
+Switch to another branch
+git checkout branch_name
+
+Create and switch to a new branch
+git checkout -b branch_name
+
+Merge another branch into current branch
+git merge branch_name
+
+View commit history
+git log
+
+Discard changes in a file
+git checkout -- filename
+
+2. CRON JOB BASICS
+
+Cron is used in Linux/Unix systems to schedule commands or scripts to run automatically at specific times.
+
+Cron job syntax
+
+* * * * * command_to_execute
+          | | | | |
+          | | | | ----- Day of week (0 - 7) (Sunday = 0 or 7)
+          | | | ------- Month (1 - 12)
+          | | --------- Day of month (1 - 31)
+          | ----------- Hour (0 - 23)
+          ------------- Minute (0 - 59)
+
+Examples
+
+Run every minute
+
+* * * * * command
+
+Run every hour
+0 * * * * command
+
+Run every day at midnight
+0 0 * * * command
+
+Run every day at 6 AM
+0 6 * * * command
+
+Run every Sunday
+0 0 * * 0 command
+
+Run every 5 minutes
+*/5 * * * * command
+
+Run every Monday at 8:30 AM
+30 8 * * 1 command
+
+Open cron editor
+crontab -e
+
+List cron jobs
+crontab -l
+
+Remove all cron jobs
+crontab -r
+
+3. MAVEN BASICS
+
+Maven is a build automation and dependency management tool used mainly for Java projects.
+
+Check Maven version
+mvn -version
+
+Create a new Maven project
+mvn archetype:generate
+
+Compile the project
+mvn compile
+
+Run tests
+mvn test
+
+Package the project (creates jar/war file)
+mvn package
+
+Clean previous build files
+mvn clean
+
+Install the project into local repository
+mvn install
+
+Main Maven directories
+
+src/main/java
+Contains application source code.
+
+src/test/java
+Contains test cases.
+
+pom.xml
+Project Object Model file that manages dependencies, plugins, and build configuration.
+
+Example dependency in pom.xml
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.3.0</version>
+</dependency>
+
+Common Maven lifecycle
+
+clean → removes previous builds
+compile → compiles source code
+test → runs tests
+package → creates jar/war
+install → installs in local repository
+deploy → copies package to remote repository
+
+---
+
+These commands are commonly used in development for
+code management (GitHub), task scheduling (Cron),
+and Java project building (Maven).
+----------------------------------
