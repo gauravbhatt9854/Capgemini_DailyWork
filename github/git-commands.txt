@@ -1,135 +1,156 @@
-## BASIC GITHUB COMMANDS, CRON JOB SYNTAX AND MAVEN BASICS
+BASIC GITHUB COMMANDS, CRON JOB SYNTAX AND MAVEN BASICS
+(Rough Notes – simple understanding)
 
-1. BASIC GITHUB COMMANDS
+---
 
-Git is a version control system used to track changes in code and collaborate with others.
+1. Git / GitHub Basic Commands
 
-Initialize a new Git repository
+Git is a version control system.
+It is used to track changes in code and work with teams on the same project.
+
 git init
+Used to initialize a new git repository in a project folder.
 
-Clone an existing repository
 git clone <repository_url>
+Used to copy an existing repository from GitHub to your local machine.
 
-Check the current status of files
 git status
+Shows the current state of the repository.
+It tells which files are modified, staged, or untracked.
 
-Add a file to staging area
 git add filename
+Adds a specific file to the staging area.
 
-Add all files to staging area
 git add .
+Adds all changed files to the staging area.
 
-Commit the staged changes
-git commit -m "commit message"
+git commit -m "message"
+Saves the staged changes in the repository with a commit message.
 
-Push changes to remote repository
 git push origin branch_name
+Uploads local commits to the remote GitHub repository.
 
-Pull latest changes from remote repository
 git pull origin branch_name
+Downloads the latest changes from the remote repository.
 
-Create a new branch
 git branch branch_name
+Creates a new branch.
 
-Switch to another branch
 git checkout branch_name
+Switches to another branch.
 
-Create and switch to a new branch
 git checkout -b branch_name
+Creates a new branch and switches to it at the same time.
 
-Merge another branch into current branch
 git merge branch_name
+Merges another branch into the current branch.
 
-View commit history
 git log
+Displays commit history.
 
-Discard changes in a file
 git checkout -- filename
+Discards changes in a file and restores it to the last committed state.
 
-2. CRON JOB BASICS
+Example (real use):
+When working on a new feature, developers usually create a new branch, commit changes, push it to GitHub, and then create a pull request.
+
+---
+
+2. Cron Job Basics
 
 Cron is used in Linux/Unix systems to schedule commands or scripts to run automatically at specific times.
 
-Cron job syntax
-
-* * * * * command_to_execute
-          | | | | |
-          | | | | ----- Day of week (0 - 7) (Sunday = 0 or 7)
-          | | | ------- Month (1 - 12)
-          | | --------- Day of month (1 - 31)
-          | ----------- Hour (0 - 23)
-          ------------- Minute (0 - 59)
-
-Examples
-
-Run every minute
+Cron Syntax:
 
 * * * * * command
 
-Run every hour
+Fields meaning:
+
+Minute (0–59)
+Hour (0–23)
+Day of Month (1–31)
+Month (1–12)
+Day of Week (0–7) → Sunday = 0 or 7
+
+Examples:
+
+* * * * * command
+          Runs every minute.
+
 0 * * * * command
+Runs every hour.
 
-Run every day at midnight
 0 0 * * * command
+Runs every day at midnight.
 
-Run every day at 6 AM
 0 6 * * * command
+Runs every day at 6 AM.
 
-Run every Sunday
-0 0 * * 0 command
-
-Run every 5 minutes
 */5 * * * * command
+Runs every 5 minutes.
 
-Run every Monday at 8:30 AM
+0 0 * * 0 command
+Runs every Sunday.
+
 30 8 * * 1 command
+Runs every Monday at 8:30 AM.
 
-Open cron editor
+Commands to manage cron jobs:
+
 crontab -e
+Opens the cron editor to add or edit cron jobs.
 
-List cron jobs
 crontab -l
+Lists all scheduled cron jobs.
 
-Remove all cron jobs
 crontab -r
+Removes all cron jobs.
 
-3. MAVEN BASICS
+Example:
+A server can run a backup script every night using a cron job.
+
+---
+
+3. Maven Basics
 
 Maven is a build automation and dependency management tool used mainly for Java projects.
 
-Check Maven version
+Common Maven commands:
+
 mvn -version
+Checks the installed Maven version.
 
-Create a new Maven project
 mvn archetype:generate
+Creates a new Maven project.
 
-Compile the project
 mvn compile
+Compiles the source code.
 
-Run tests
 mvn test
+Runs unit tests.
 
-Package the project (creates jar/war file)
 mvn package
+Packages the project into a JAR or WAR file.
 
-Clean previous build files
 mvn clean
+Removes previously compiled files and build folders.
 
-Install the project into local repository
 mvn install
+Installs the project into the local Maven repository.
 
-Main Maven directories
+Main Maven Project Structure:
 
 src/main/java
-Contains application source code.
+Contains the main application source code.
 
 src/test/java
 Contains test cases.
 
 pom.xml
-Project Object Model file that manages dependencies, plugins, and build configuration.
+The Project Object Model file.
+It manages dependencies, plugins, and build configuration.
 
-Example dependency in pom.xml
+Example dependency in pom.xml:
 
 <dependency>
     <groupId>org.springframework</groupId>
@@ -137,18 +158,19 @@ Example dependency in pom.xml
     <version>5.3.0</version>
 </dependency>
 
-Common Maven lifecycle
+Common Maven Lifecycle:
 
-clean → removes previous builds
+clean   → removes old build files
 compile → compiles source code
-test → runs tests
-package → creates jar/war
+test    → runs tests
+package → creates JAR/WAR file
 install → installs in local repository
-deploy → copies package to remote repository
+deploy  → publishes the package to a remote repository
 
 ---
 
-These commands are commonly used in development for
-code management (GitHub), task scheduling (Cron),
-and Java project building (Maven).
-----------------------------------
+These tools are commonly used in development:
+
+Git/GitHub → code version control
+Cron → scheduling automatic tasks
+Maven → building and managing Java projects
