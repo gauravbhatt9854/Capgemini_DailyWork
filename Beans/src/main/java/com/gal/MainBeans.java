@@ -1,18 +1,25 @@
 package com.gal;
 
 import com.gal.algo.MyCalc;
-import com.gal.algo.PasswordHasher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import javax.sql.DataSource;
 import java.util.Arrays;
 
 public class MainBeans {
     public static void main(String[] args) {
+
+//        this line create and empty contaier also called ioc conatainer -> inversion of control ->
+//        manual object creation to spring creating and managing object
+
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+
+//        scan inside com.gal and all subpackagees of it so find  all the beans ->
+//        identify annotations like component , service etc
 
         context.scan("com.gal");
         System.out.println("next command will create beans");
+
+//        it refresh the container , Inject the dependency where asked or required
         context.refresh();
         System.out.println("beans are created");
 
@@ -44,5 +51,7 @@ public class MainBeans {
         Arrays.stream(context.getBeanDefinitionNames())
                 .forEach(System.out::println);
 
+
+        
     }
 }

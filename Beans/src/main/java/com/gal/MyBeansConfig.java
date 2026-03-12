@@ -42,4 +42,11 @@ public class MyBeansConfig {
         return ds;
     }
 
+//    scope
+//    @Scope("singleton")
+    //    @Scope("prototype") new object everytime bean aksed
+    //    @Scope("request")
+    //    @Scope("session")
+    //    @Scope("application")
+
 }
