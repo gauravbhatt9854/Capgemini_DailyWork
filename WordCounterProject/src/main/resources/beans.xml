@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Example Bean Definition -->
+    <bean id="myService" class="com.project.Str">
+        <!-- Injecting a property -->
+        <constructor-arg value="gaurav"/>
+    </bean>
+
+    <!--    &lt;!&ndash; Another Bean with Constructor Injection &ndash;&gt;-->
+    <!--    <bean id="myRepository" class="com.example.repository.MyRepository">-->
+    <!--        <constructor-arg value="database.db" />-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash; Bean with dependency injection &ndash;&gt;-->
+    <!--    <bean id="appController" class="com.example.controller.AppController">-->
+    <!--        <property name="service" ref="myService" />-->
+    <!--        <property name="repository" ref="myRepository" />-->
+    <!--    </bean>-->
+
+</beans>
