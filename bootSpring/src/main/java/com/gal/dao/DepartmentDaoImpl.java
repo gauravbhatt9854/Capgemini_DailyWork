@@ -3,18 +3,18 @@ package com.gal.dao;
 import com.gal.model.Department;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 @Repository
 public class DepartmentDaoImpl implements DepartmentDao{
     @Autowired
     private EntityManager entityManager;
 
+    @Transactional
     public Department save(Department department)
     {
         entityManager.persist(department);
@@ -37,7 +37,4 @@ public class DepartmentDaoImpl implements DepartmentDao{
     {
         return entityManager.createQuery("select d from  Department d").getResultList();
     }
-
-
-
 }

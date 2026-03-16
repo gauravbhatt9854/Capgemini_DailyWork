@@ -34,4 +34,41 @@ public class DepartmentController {
         return ResponseEntity.ok(d1);
     }
 
+    @DeleteMapping("/deleteDepartment")
+    public ResponseEntity<Department> deleteDepartment(@RequestParam("id") int deptId)
+    {
+        Department d1 = departmentService.deleteDepartment(deptId);
+        return ResponseEntity.ok(d1);
+    }
+
+    @PatchMapping("/updateDeptName")
+    public ResponseEntity<Department> updateDeptName(@RequestParam("id") int deptId , @RequestParam("name") String newName)
+    {
+        Department d1 = departmentService.updateDeptName(deptId , newName);
+        return ResponseEntity.ok(d1);
+    }
+
+    @GetMapping("/dept/{id}/{dept}/{city}")
+    public ResponseEntity<Department> getDummyDept(@PathVariable int id , @PathVariable String dept , @PathVariable String city)
+    {
+        Department department = new Department(id, dept , city);
+        return ResponseEntity.ok(department);
+    }
+
+    @GetMapping("/dept")
+    public ResponseEntity<Department> getDummyDept2(@RequestParam("id") int id , @RequestParam("dept") String dept , @RequestParam("city") String city)
+    {
+        Department department = new Department(id, dept , city);
+        return ResponseEntity.ok(department);
+    }
+
+    @GetMapping("/deptName")
+    public ResponseEntity<Department> findByName(@RequestParam("name") String name)
+    {
+        Department department = departmentService.findByName(name);
+        return ResponseEntity.ok(department);
+    }
+
+
+
 }
