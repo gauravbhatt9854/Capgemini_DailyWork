@@ -1,0 +1,3 @@
+2026-03-17 15:37:56 [http-nio-8080-exec-3] INFO  c.g.controller.DepartmentController - department registered successfullyDepartment(id=1, name=Purchase, location=Noida)
+2026-03-17 15:38:06 [http-nio-8080-exec-4] INFO  c.g.controller.DepartmentController - department registered successfullyDepartment(id=2, name=health, location=delhi)
+2026-03-17 15:40:18 [http-nio-8080-exec-8] INFO  c.g.controller.DepartmentController - put request successfull

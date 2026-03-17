@@ -17,19 +17,15 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department saveDepartment(Department department) {
-        System.out.println("Impl 1 is running");
-        return  departmentDao.save(department);
+        return departmentDao.save(department);
     }
-
     @Override
     public List<Department> getAllDepartment() {
-        System.out.println("Impl 1 is running");
         return departmentDao.findAll();
     }
 
     @Override
     public Department getDepartmentById(int deptId) {
-        System.out.println("Impl 1 is running");
         return departmentDao.getById(deptId);
     }
 
@@ -45,6 +41,11 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department findByName(String name) {
+        return null;
+    }
+
+    @Override
+    public Department putDepartment(Department department) {
         return null;
     }
 }

@@ -18,4 +18,6 @@ public interface DepartmentService {
     Department updateDeptName(int deptId , String newName);
 
     Department findByName(String name);
+
+    Department putDepartment(Department department);
 }

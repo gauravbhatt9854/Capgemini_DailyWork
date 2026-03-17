@@ -1,6 +1,8 @@
 package com.gal.controller;
 import com.gal.model.Department;
 import com.gal.services.DepartmentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,8 @@ import java.util.List;
 @RestController
 public class DepartmentController {
 
+    private static final Logger log = LoggerFactory.getLogger(DepartmentController.class);
+
     @Autowired
     DepartmentService departmentService;
 
@@ -17,8 +21,10 @@ public class DepartmentController {
     public ResponseEntity<Department> saveDepartment(@RequestBody Department department)
     {
         Department department1 = departmentService.saveDepartment(department);
+        log.info("department registered successfully" + department.toString());
         return ResponseEntity.ok(department1);
     }
+
 
     @GetMapping("/departments")
     public ResponseEntity<List<Department>> getAllDepartments()
@@ -47,6 +53,15 @@ public class DepartmentController {
         Department d1 = departmentService.updateDeptName(deptId , newName);
         return ResponseEntity.ok(d1);
     }
+
+    @PutMapping("/updateDepartment")
+    public ResponseEntity<Department> putDepartment(@RequestBody Department department)
+    {
+        departmentService.putDepartment(department);
+        log.info("put request successfull");
+        return ResponseEntity.ok(department);
+    }
+
 
     @GetMapping("/dept/{id}/{dept}/{city}")
     public ResponseEntity<Department> getDummyDept(@PathVariable int id , @PathVariable String dept , @PathVariable String city)
