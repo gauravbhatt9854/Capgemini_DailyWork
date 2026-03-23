@@ -20,4 +20,10 @@ public interface JpaTrainingDao extends JpaRepository<Training, Long> {
             "AND t.startDate > CURRENT_DATE")
     List<Training> findUpcomingTrainingsWithSpecifiedTopic(String name);
 
+    @Query(value = "select * from training" , nativeQuery = true)
+    List<Training> getAllDept();
+
+//    if manager name is given
+
+    List<Training> findByTrainerName(String trainerName);
 }

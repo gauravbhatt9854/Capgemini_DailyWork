@@ -1,9 +1,12 @@
 package com.gal.controller;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gal.model.Department;
 import com.gal.services.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +19,26 @@ public class DepartmentController {
 
     @Autowired
     DepartmentService departmentService;
+
+
+    @GetMapping("/")
+    public ResponseEntity<String> tempJson() throws JsonProcessingException {
+        Department department = new Department(10 , "health" , "mysoore");
+        ObjectMapper objectMapper = new ObjectMapper();
+        String output = objectMapper.writeValueAsString(department);
+        System.out.println(output);
+
+//        return output;
+//        return ResponseEntity.ok().body(output);
+//        return  ResponseEntity.status(HttpStatus.CREATED).body(output);
+//        return  ResponseEntity.status(HttpStatus.NO_CONTENT);
+        return ResponseEntity.ok()
+                .header("content-type" , "application/json")
+                .body(output);
+    }
+
+
+
 
     @PostMapping("/register")
     public ResponseEntity<Department> saveDepartment(@RequestBody Department department)

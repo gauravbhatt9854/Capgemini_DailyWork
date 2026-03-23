@@ -29,4 +29,5 @@ public class Training {
     private LocalDate endDate;
     private String trainerName;
     private String venue;
+    private String Company;
 }

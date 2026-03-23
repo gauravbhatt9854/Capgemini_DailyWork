@@ -28,4 +28,14 @@ public class TrainingServiceImpl implements TrainingService{
     public List<Training> findUpcomingTrainingsWithSpecifiedTopic(String name) {
         return jpaTrainingDao.findUpcomingTrainingsWithSpecifiedTopic(name);
     }
+
+    @Override
+    public List<Training> getAllDept() {
+        return jpaTrainingDao.getAllDept();
+    }
+
+    @Override
+    public List<Training> findByTrainerName(String name) {
+        return jpaTrainingDao.findByTrainerName(name);
+    }
 }

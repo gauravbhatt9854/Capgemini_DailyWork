@@ -13,4 +13,8 @@ public interface TrainingService {
     List<Training> findCurrentAndUpcomingTrainingsWithSpecifiedTopic(String name);
 
     List<Training> findUpcomingTrainingsWithSpecifiedTopic(String name);
+
+    List<Training> getAllDept();
+
+    List<Training> findByTrainerName(String name);
 }

@@ -1,0 +1,18 @@
+2026-03-17 11:14:41 [http-nio-8080-exec-1] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 11:14:49 [http-nio-8080-exec-2] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 11:14:51 [http-nio-8080-exec-5] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 11:15:21 [http-nio-8080-exec-7] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 11:16:15 [http-nio-8080-exec-3] DEBUG com.gal.controller - request for findUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:08:12 [http-nio-8080-exec-1] DEBUG com.gal.controller - request for getAllDept
+2026-03-17 12:10:27 [http-nio-8081-exec-1] DEBUG com.gal.controller - request for getAllDept
+2026-03-17 12:10:33 [http-nio-8081-exec-3] DEBUG com.gal.controller - request for getAllDept
+2026-03-17 12:11:13 [http-nio-8081-exec-4] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 12:11:15 [http-nio-8081-exec-5] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 12:12:01 [http-nio-8081-exec-7] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainings
+2026-03-17 12:16:44 [http-nio-8081-exec-1] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:18:35 [http-nio-8081-exec-4] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:18:50 [http-nio-8081-exec-6] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:18:55 [http-nio-8081-exec-7] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:19:04 [http-nio-8081-exec-8] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:19:26 [http-nio-8081-exec-9] DEBUG com.gal.controller - request for findCurrentAndUpcomingTrainingsWithSpecifiedTopic
+2026-03-17 12:37:31 [http-nio-8081-exec-2] DEBUG com.gal.controller - Delhi
