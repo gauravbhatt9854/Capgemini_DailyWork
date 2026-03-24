@@ -1,0 +1,1 @@
+2026-03-17 15:44:58 [http-nio-8080-exec-1] ERROR c.g.s.DepartmentServiceImpl2 - trying to update an department that doesn't even exist
